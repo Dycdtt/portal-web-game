@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>PORTAL 1: WEB EDITION</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+    }
+    body, html {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background-color: #000;
+      font-family: Arial, sans-serif;
+    }
+    #canvas-container {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+    #overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.95);
+      z-index: 99999;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: #ffffff;
+      text-align: center;
+    }
+    #overlay h1 {
+      font-size: 28px;
+      margin-bottom: 10px;
+      letter-spacing: 2px;
+    }
+    #overlay p {
+      font-size: 16px;
+      color: #888888;
+      margin-bottom: 30px;
+    }
+    #start-btn {
+      padding: 14px 40px;
+      font-size: 18px;
+      color: #00d2ff;
+      background: transparent;
+      border: 2px solid #00d2ff;
+      border-radius: 8px;
+      cursor: pointer;
+      outline: none;
+      box-shadow: 0 0 10px rgba(0, 210, 255, 0.3);
+      transition: all 0.2s ease;
+      touch-action: manipulation;
+    }
+    #start-btn:active {
+      background: rgba(0, 210, 255, 0.2);
+      transform: scale(0.96);
+    }
+  </style>
+  <!-- Three.js 主庫與 GLTFLoader -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+</head>
+<body>
+
+  <div id="overlay">
+    <h1>PORTAL 1: WEB EDITION</h1>
+    <p>測驗室 00</p>
+    <button id="start-btn">進入喚醒艙</button>
+  </div>
+
+  <div id="canvas-container"></div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
